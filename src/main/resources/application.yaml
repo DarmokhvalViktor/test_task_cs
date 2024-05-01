@@ -1,0 +1,12 @@
+spring:
+  config:
+    import: classpath:secrets.yaml
+  application:
+    name: "rest_with_liquibase"
+  datasource:
+    url: ${dockerPostgres.url}
+    username: ${dockerPostgres.username}
+    password: ${dockerPostgres.password}
+    driver-class-name: org.postgresql.Driver
+user:
+  required_age: 18
